@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Windward — Generative studio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <aside>
+      <p class="kicker">Generative studio</p>
+      <h1>Windward</h1>
+      <p class="lede">Seeded systems, not filters. Same seed, same piece.</p>
+
+      <h2>Engine</h2>
+      <div class="engines">
+        <button data-engine="flow" class="is-on">Flow field</button>
+        <button data-engine="orbits">Orbits</button>
+        <button data-engine="grove">L-system grove</button>
+        <button data-engine="lorenz">Lorenz mist</button>
+        <button data-engine="super">Superformula</button>
+      </div>
+
+      <label class="field">
+        <span>Palette</span>
+        <select id="palette">
+          <option value="night">Night ridge</option>
+          <option value="glacier">Glacier</option>
+          <option value="ember">Ember</option>
+          <option value="paper">Paper</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Seed</span>
+        <input id="seed" type="text" />
+      </label>
+      <div class="row">
+        <button id="reshuffle" class="primary" type="button">New seed</button>
+        <button id="export" type="button">Export PNG</button>
+      </div>
+      <h2>Parameters</h2>
+      <div id="fields"></div>
+      <p class="hint">Space new seed · E export · 1–5 engines</p>
+    </aside>
+    <main>
+      <canvas id="art"></canvas>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
